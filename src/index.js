@@ -40,8 +40,10 @@ class AddressForm extends React.Component {
             default: name = ''; break;
           }
           return (
-            <div key={key} className="typeahead-address-container">
-              <label className="typeahead-address-label" htmlFor="district">{name}</label>
+            <div key={key} className="ant-row ant-form-item">
+              <div className="ant-form-item-label ant-col-xs-24 ant-col-sm-8">
+                <label htmlFor="district">{name}</label>
+              </div>
               <AddressTypeahead
                 renderResult={this.props.renderResult}
                 onOptionSelected={(result) => {
